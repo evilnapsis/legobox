@@ -1,9 +1,9 @@
-legobox
+LegoBox
 =======
 
 LegoBox es un framework PHP ideal para desarrollar aplicaciones sencillas.
 
-Introduccion
+##Introduccion
 
 LegoBox ayuda en la gestion de secciones, formularios, validaciones.
 
