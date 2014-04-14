@@ -5,6 +5,10 @@
 // * Database
 // * Session
 
+include "core/modules/".Module::$module."/model/UserData.php";
+include "core/modules/".Module::$module."/model/PostData.php";
+
+
 Module::loadLayout("index");
 
 ?>
