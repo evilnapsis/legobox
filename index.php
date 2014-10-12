@@ -1,8 +1,8 @@
 <?php
 // el archivo autoload inicializa todos lo archivos necesarios para que el framework funcione
-include "core/autoload.php";
+include "lib/legobox/autoload.php";
 
 // cargamos el modulo iniciar.
-Core::loadModule("blog");
+App::load("wellcome");
 
 ?>
