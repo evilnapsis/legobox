@@ -7,11 +7,20 @@ require "lib/Slim/Slim.php";
 
 $app = new \Slim\Slim(array("debug"=>true ));
 
-$app->get('/hello', function () {
+$app->get('/', function () {
      //echo "<br><br><br>Hello";
     //$app->render("index.php");
  App::load("wellcome");
 });
+
+$app->get('/:view', function ($view) {
+     //echo "<br><br><br>Hello";
+    //$app->render("index.php");
+    echo "<br><br><br>".$view;
+    print_r($_GET);
+ App::load("wellcome");
+});
+
 
 $app->run();
 
