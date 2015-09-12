@@ -1,17 +1,11 @@
 <html>
 <head>
-<meta charset="utf8"/>
-<title>Hello Legobox 3.5</title>
-
-<link rel="stylesheet" type="text/css" href="/legobox-v3.5/res/bootstrap3/css/bootstrap.min.css">
-<script src="res/jquery.min.js"></script>
+<title>Sistema de Registro, Login, Recuperacion y Administracion | RLRA</title>
+<link rel="stylesheet" type="text/css" href="res/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="res/font-awesome/css/font-awesome.min.css">
-<?php Core::includeCSS(); ?>
-<?php Core::includeJS(); ?>
+
 </head>
-<?php 
-/// print_r($_GLOBAL); 
-?>
+
 <body>
 <header class="navbar navbar-inverse navbar-static-top" role="banner">
   <div class="container">
@@ -22,45 +16,32 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="./">LegoBox</a>
+      <a class="navbar-brand" href="./">RLRA</a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-          <li><a href="./"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
-          <li><a href="index.php?view=page1"><i class="glyphicon glyphicon-file"></i> Pagina 1</a></li>
+          <li><a href="./"><i class="fa fa-home"></i> Inicio</a></li>
+          <?php if(isset($_SESSION["user_id"])):?>
+          <li><a href="./?view=home"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+          <?php endif; ?>
       </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Link</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
-    </ul>
     </nav>
   </div>
 </header>
-<div class="clearfix"></div>
+<!-- - - - - - - - - - - - - - - -->
 <?php 
 	View::load("index");
 ?>
-
-
-<script src="res/bootstrap3/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-
-
-  $(document).ready(
-    function()
-    {
-      $('#contenido').redactor();
-    }
-  );
-  </script>
+<!-- - - - - - - - - - - - - - - -->
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+  <hr>
+  <p>Evilnapsis &copy; 2015</p>
+  </div>
+  </div>
+</div>
+<script src="res/jquery.min.js"></script>
+<script src="res/bootstrap/js/bootstrap.min.js"></script>
 </body>
-
 </html>

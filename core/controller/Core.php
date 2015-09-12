@@ -16,7 +16,6 @@ class Core {
 					$fullpath = $path.$entry;
 				if(!is_dir($fullpath)){
 						echo "<link rel='stylesheet' type='text/css' href='".$fullpath."' />";
-
 					}
 				}
 			}
@@ -28,6 +27,11 @@ class Core {
 	public static function redir($url){
 		echo "<script>window.location='".$url."';</script>";
 	}
+
+	public static function alert($url){
+		echo "<script>alert('".$url."');</script>";
+	}
+
 
 	public static function includeJS(){
 		$path = "res/js/";
