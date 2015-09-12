@@ -37,7 +37,7 @@ class Lb {
 				}
 
 
-				$this->default_controller = $this->default_controller."Controller";
+				$this->default_controller = ucfirst($this->default_controller)."Controller";
 				require_once "app/controllers/".$this->default_controller.".php";
 				$controller = new $this->default_controller;
 				$method = $this->default_view."Action";

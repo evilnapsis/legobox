@@ -1,4 +1,5 @@
 <?php
+//print $cntrllr->hola;
 
 $meta = $data["meta"];
 
@@ -27,26 +28,26 @@ $meta = $data["meta"];
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="./">LegoBox</a>
+      <a class="navbar-brand" href="./">MyApp</a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-          <li><a href="./"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
-          <li><a href="index.php?view=page1"><i class="glyphicon glyphicon-file"></i> Pagina 1</a></li>
-          <li><a href="index.php?r=index/home"><i class="glyphicon glyphicon-cog"></i> Action</a></li>
+          <?php if(Session::exists("user_id")):
+          $user = UserData::getById(Session::get("user_id"));
+          ?>
+          <li><a href="./"><i class="glyphicon glyphicon-user"></i> <?php echo $user->name; ?></a></li>
+          <li><a href="./?r=index/processlogout"><i class="glyphicon glyphicon-off"></i> Salir</a></li>
+        <?php else:?>
+          <li><a href="./">Inicio</a></li>
+          <li><a href="./?r=index/register">Registro</a></li>
+           <li><a href="./?r=index/activate">Activar</a></li>
+          <li><a href="./?r=index/login">Login</a></li>
+          <li><a href="./?r=index/recover">Recuperar</a></li>
+
+          <?php endif;?>
+
       </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Link</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
-    </ul>
+
     </nav>
   </div>
 </header>
@@ -54,19 +55,15 @@ $meta = $data["meta"];
 <?php 
 	require_once(View::$content);
 ?>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+</div>
+</div>
+</div>
 
+<script src="res/bootstrap3/js/bootstrap.min.js"></script>
 
-<script src="../res/bootstrap3/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-
-
-  $(document).ready(
-    function()
-    {
-      $('#contenido').redactor();
-    }
-  );
-  </script>
 </body>
 
 </html>
