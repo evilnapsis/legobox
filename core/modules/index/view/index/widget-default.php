@@ -2,10 +2,9 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="jumbotron">
 				<h2><i class="fa fa-dashboard"></i> Registro, Login, Recover &amp; Admin</h2>
+                <hr>
 				<p>RLRA es un sistema que cuenta con la funcion basica de registro de usuarios, activacion, login, recuperacion y administracion.</p>
-			</div>
 		</div>
 
 	</div>

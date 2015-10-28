@@ -6,7 +6,7 @@ $user = UserData::getById($_SESSION["user_id"]);
 <div class="container">
 	<div class="row">
 
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-4 col-md-offset-4">
 <!--
 <div class="panel panel-default">
 		<div class="panel-heading">
@@ -37,7 +37,7 @@ $user = UserData::getById($_SESSION["user_id"]);
     Cambiar contrase&ntilde;a
     </div>
     <div class="panel-body">
-    <form role="form" method="post" action="./?r=index/changepassword">
+    <form role="form" method="post" action="./?action=changepassword">
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
     <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
@@ -56,3 +56,4 @@ $user = UserData::getById($_SESSION["user_id"]);
 		</div>
 	</div>
 </div>
+<br><br><br>
